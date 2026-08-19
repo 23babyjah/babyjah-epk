@@ -52,9 +52,11 @@ button{font:inherit}
 .proof span{margin-top:.55rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700}
 .proof .proof-statement{border:0;font-family:var(--display);font-size:clamp(1.3rem,2.2vw,2.5rem);line-height:1.05;letter-spacing:-.03em}
 .type-ribbon{overflow:hidden;background:var(--black);color:var(--white);border-block:1px solid var(--line);padding:.8rem 0}
-.type-ribbon div{display:flex;align-items:center;width:max-content;gap:1.4rem;white-space:nowrap;font-family:var(--display);font-size:clamp(1.25rem,2.6vw,2.6rem);line-height:1;letter-spacing:-.03em;animation:ribbon-run 20s linear infinite}
-.type-ribbon i{width:.5rem;height:.5rem;background:currentColor;transform:rotate(45deg)}
-@keyframes ribbon-run{to{transform:translateX(-50%)}}
+.type-ribbon-track{display:flex;width:max-content;white-space:nowrap;font-family:var(--display);font-size:clamp(1.25rem,2.6vw,2.6rem);line-height:1;letter-spacing:-.03em;animation:ribbon-run 24s linear infinite;will-change:transform}
+.type-ribbon-set{display:flex;flex:0 0 auto;align-items:center;gap:1.4rem;padding-right:1.4rem}
+.type-ribbon-set b{font:inherit}
+.type-ribbon i{flex:0 0 auto;width:.5rem;height:.5rem;background:currentColor;transform:rotate(45deg)}
+@keyframes ribbon-run{to{transform:translateX(-20%)}}
 
 .section-dark{background:var(--black);color:var(--white)}
 .music{padding:clamp(5rem,10vw,10rem) var(--pad)}
@@ -188,7 +190,7 @@ footer p{margin:0}
   .contact-actions img{grid-column:auto;width:min(10rem,52vw);height:auto}
 }
 
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.motion-ready [data-reveal]{transform:none!important;opacity:1!important;filter:none!important;clip-path:none!important}.motion-ready [data-parallax] img{height:100%;transform:none!important}.poster-slices{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.motion-ready [data-reveal]{transform:none!important;opacity:1!important;filter:none!important;clip-path:none!important}.motion-ready [data-parallax] img{height:100%;transform:none!important}.poster-slices{display:none}.type-ribbon-track{animation:none!important;transform:none!important}}
 
 @media print{
   @page{size:A4;margin:12mm}
