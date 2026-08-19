@@ -37,8 +37,8 @@ button{font:inherit}
 .qr-link img{width:100%;height:auto}
 .qr-link span{display:block;margin-top:.45rem;text-align:center;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 .hero-bottom{position:relative;z-index:2;width:100%;display:flex;align-items:flex-end;justify-content:space-between;gap:2rem}
-.hero h1{display:flex;margin:0 0 -.05em;font-family:var(--display);font-size:clamp(4rem,13vw,12rem);line-height:.78;letter-spacing:-.04em;text-transform:lowercase;overflow:hidden}
-.hero h1 span{display:block;transform-origin:50% 100%}
+.hero h1{display:flex;flex:1 1 auto;min-width:0;margin:0 0 -.05em;font-family:var(--display);font-size:clamp(3.8rem,11.5vw,10.5rem);line-height:.78;letter-spacing:-.04em;text-transform:lowercase;overflow:visible;white-space:nowrap}
+.hero h1 span{display:block;flex:0 0 auto;transform-origin:50% 100%}
 .motion-ready .hero h1 span{animation:letter-rise .9s var(--ease) both;animation-delay:calc(.055s * var(--letter-index,0) + .12s)}
 .hero h1 span:nth-child(1){--letter-index:1}.hero h1 span:nth-child(2){--letter-index:2}.hero h1 span:nth-child(3){--letter-index:3}.hero h1 span:nth-child(4){--letter-index:4}.hero h1 span:nth-child(5){--letter-index:5}.hero h1 span:nth-child(6){--letter-index:6}.hero h1 span:nth-child(7){--letter-index:7}
 @keyframes letter-rise{from{transform:translateY(115%) skewY(7deg);filter:blur(9px)}to{transform:none;filter:blur(0)}}
@@ -120,6 +120,8 @@ footer p{margin:0}
 .motion-ready [data-parallax] img{height:112%;transform:translateY(var(--parallax-y,-5%));will-change:transform}
 
 @media (max-width:900px) and (min-width:761px){
+  .hero h1{font-size:clamp(4rem,10.5vw,6rem)}
+  .hero-bottom{gap:1.25rem}
   .about{grid-template-columns:1fr;gap:3.5rem}
   .about-visual{min-height:31rem;width:min(100%,46rem);margin-inline:auto}
   .about-mark{font-size:clamp(15rem,43vw,21rem)}
